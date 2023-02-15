@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.passwd.main.mapper.UserdataMapper">
+
+    <resultMap id="BaseResultMap" type="com.passwd.main.domain.UserData">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="localurl" column="localUrl" jdbcType="VARCHAR"/>
+            <result property="username" column="username" jdbcType="VARCHAR"/>
+            <result property="password" column="password" jdbcType="VARCHAR"/>
+            <result property="bg" column="bg" jdbcType="VARCHAR"/>
+            <result property="tag" column="tag" jdbcType="VARCHAR"/>
+            <result property="createtime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updatetime" column="updateTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,localUrl,username,
+        password,bg,tag,
+        createTime,updateTime
+    </sql>
+</mapper>
